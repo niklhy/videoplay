@@ -5,3 +5,10 @@
 /media_library.db-shm
 /media_library.db-wal
 /启动流程完全解析.md
+/database.sqlite
+/database.sqlite-shm
+/database.sqlite-wal
+/config.json.bak
+/cache
+__pycache__/
+*.pyc
