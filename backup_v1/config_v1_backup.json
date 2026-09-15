@@ -1,0 +1,264 @@
+{
+  "player_path": "C:\\\\Program Files\\\\DAUM\\\\PotPlayer\\\\PotPlayerMini64.exe",
+  "viewer_geometry": "1224x773+743+94",
+  "thumbnail_size": "中",
+  "debug_mode": true,
+  "bookmarks": [],
+  "tags": [
+    "收藏喜欢",
+    "调教",
+    "OL空姐制服",
+    "高跟鞋",
+    "黑丝吊带袜",
+    "颈圈"
+  ],
+  "video_tags": {},
+  "tag_filter_mode": "union",
+  "last_folder": "\\\\roy-qh918-h\\others\\Other",
+  "last_scroll_y": 0.0,
+  "remember_location": true,
+  "gallery_colors": {
+    "linked_video": "#FFE4B5",
+    "video_placeholder": "#2C3E50",
+    "dedicated_match": "#D4EDDA",
+    "cover_match": "#D1ECF1",
+    "normal_video": "#D6EAF8",
+    "image_only": "white",
+    "selected": "#f5a2a2"
+  },
+  "devices": {
+    "roy-pc": {
+      "display_name": "家电脑",
+      "bookmarks": [
+        {
+          "path": "\\\\roy-qh918-h\\others\\Other",
+          "display_name": "群晖918 Other",
+          "id": "e674fe576622"
+        },
+        {
+          "path": "\\\\roy-qh918-h\\迅雷\\下载",
+          "display_name": "迅雷下载",
+          "id": "c279fe45a6cc"
+        },
+        {
+          "path": "F:\\other",
+          "display_name": "本机F盘 Other",
+          "id": "5c25204db1ec"
+        }
+      ]
+    },
+    "Roy-MI-PC": {
+      "display_name": "玫瑰大街-米PC",
+      "bookmarks": [
+        {
+          "path": "\\\\roy-qh925\\others",
+          "display_name": "玫瑰大街-群晖925",
+          "id": "30fead46fe59"
+        }
+      ]
+    }
+  },
+  "tags_v2": {
+    "roy-pc": {
+      "e674fe576622": {
+        "个人专属\\q浅野こころ(浅野心)\\SONE-855 どんな命令も完全合意するキレかわドMメイドを俺が飽きるまでむちゃくちゃにヤリ散らしてヤッた。 浅野こころ\\SONE-855.mp4": [
+          "调教",
+          "收藏喜欢"
+        ],
+        "个人专属\\b北川ゆず(北川柚子)\\DVAJ-297 課外性奴 北川ゆず\\DVAJ-297.mp4": [
+          "调教"
+        ],
+        "个人专属\\z佐々木あき(佐佐木明希)\\DVAJ-319 課外性奴 佐々木あき\\DVAJ-319.mp4": [
+          "调教"
+        ],
+        "个人专属\\x相沢みなみ(相泽南)\\IPX-697 禁欲の果て、汗と絶頂汁まみれで交わりまくった3日間 相沢みなみ\\IPX-697-Uncensored.mp4": [
+          "黑丝吊带袜",
+          "收藏喜欢"
+        ],
+        "个人专属\\t桃乃木かな\\IPZZ-574 俺の知らない妻の歪んだ性癖… 普段優しい最愛の妻はドS隣人に調教済のマゾ奴●でした。 桃乃木かな\\IPZZ-574.mp4": [
+          "调教",
+          "收藏喜欢"
+        ],
+        "个人专属\\t桃乃木かな\\IPZZ-386 蒸発した父親の肩代わりに肉体返済を強いられた女子大生\\IPZZ-386-Uncensored.mp4": [
+          "收藏喜欢",
+          "调教",
+          "黑丝吊带袜"
+        ],
+        "个人专属\\t桃乃木かな\\IPBZ-004 配信限定 ナチュポケ REC SMハメ撮り 桃乃木かな IP女優のありのまま解禁\\IPBZ-004.mp4": [
+          "收藏喜欢",
+          "调教"
+        ],
+        "个人专属\\t天使もえ(天使萌)\\FSDSS-373 都合のいい女を連れまわし徘徊調教。どんなチ●ポも欲しがるメスへと育成…\\FSDSS-373.mp4": [
+          "调教"
+        ],
+        "个人专属\\b八掛うみ(八挂海)\\ABW-283 俺の従順ペット候補生 04 八掛うみ\\ABW-283-Uncensored.mp4": [
+          "颈圈",
+          "调教"
+        ],
+        "个人专属\\a愛世くらら(爱世梦罗)\\ABP-744 男を狂わす、骨ヌキ凄テク 魔性のオンナ 絶対イッちゃう舌＆腰使い！ 愛世くらら\\ABP-744.mp4": [
+          "高跟鞋"
+        ]
+      }
+    }
+  },
+  "current_device_name": "roy-pc",
+  "crawler": {
+    "urls": [
+      "https://www.dmmsee.bond/{番号}",
+      "https://www.busjav.bond/{番号}",
+      "https://www.busfan.cyou/{番号}",
+      "https://www.dmmsee.ink/{番号}",
+      "https://www.seejav.bond/{番号}"
+    ],
+    "interval_min": 1000,
+    "interval_max": 3000,
+    "placeholder": "{番号}",
+    "crawl_mode": "round_robin",
+    "request_method": "GET",
+    "post_data": "",
+    "user_agents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
+    ],
+    "use_proxy": false,
+    "proxy_url": "",
+    "retry_times": 3,
+    "timeout": 10,
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Accept-Language": "zh-CN,zh;q=0.9",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Connection": "keep-alive",
+      "content-type": "text/html;Charset=utf-8;;charset=UTF-8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "extract_rules": [
+      {
+        "field_id": "code",
+        "field_name": "📌 番号",
+        "rule_type": "custom",
+        "rule_content": "result = soup.select_one('span[style=\"color:#CC0000;\"]').text.strip()",
+        "placeholder": "",
+        "extract_text": true,
+        "multiple": false,
+        "enabled": true
+      },
+      {
+        "field_id": "date",
+        "field_name": "📅 日期",
+        "rule_type": "custom",
+        "rule_content": "result = soup.find('span', class_='header', string='發行日期:').next_sibling.strip()",
+        "placeholder": "",
+        "extract_text": true,
+        "multiple": false,
+        "enabled": true
+      },
+      {
+        "field_id": "actors",
+        "field_name": "👥 演员",
+        "rule_type": "css",
+        "rule_content": "p span.genre>a",
+        "placeholder": "",
+        "extract_text": true,
+        "multiple": true,
+        "enabled": true
+      },
+      {
+        "field_id": "title",
+        "field_name": "📖 标题",
+        "rule_type": "css",
+        "rule_content": "h3",
+        "placeholder": "",
+        "extract_text": true,
+        "multiple": false,
+        "enabled": true
+      },
+      {
+        "field_id": "duration",
+        "field_name": "时长",
+        "rule_type": "custom",
+        "rule_content": "text = soup.find('span', class_='header', string='長度:').next_sibling.strip()\n\n# 支持 \"140分鐘\" 或 \"2小時30分鐘\" 格式\nhours = re.search(r'(\\d+)\\s*小時', text)\nminutes = re.search(r'(\\d+)\\s*分鐘', text)\n\ntotal_seconds = 0\nif hours:\n    total_seconds += int(hours.group(1)) * 3600\nif minutes:\n    total_seconds += int(minutes.group(1)) * 60\n\nresult = total_seconds",
+        "placeholder": "",
+        "extract_text": true,
+        "multiple": false,
+        "enabled": true
+      }
+    ],
+    "css_selector": "body > div.container",
+    "show_full_html": true,
+    "encoding": "auto",
+    "render_js": false,
+    "render_engine": "playwright",
+    "browser_type": "chrome",
+    "headless": true,
+    "browser_timeout": 30,
+    "wait_for_selector": "",
+    "window_size": "1920,1080",
+    "block_images": true,
+    "snippets": {
+      "code": {
+        "snippet": "<span style=\"color:#CC0000;\">{code}</span>",
+        "placeholder": "{code}"
+      },
+      "date": {
+        "snippet": "<p><span class=\"header\">發行日期:</span> {date}</p>",
+        "placeholder": "{date}"
+      },
+      "actors": {
+        "snippet": "<div id=\"star-div\">\n<h4 id=\"star-hide\" style=\"cursor: pointer;\">演員 <span class=\"glyphicon glyphicon-minus\"></span></h4>\n<div id=\"avatar-waterfall\">\n<a class=\"avatar-box\" href=\"https://www.dmmsee.bond/star/125l\">\n<div class=\"photo-frame\">\n<img src=\"/pics/actress/125l_a.jpg\" title=\"北岡果林\"/>\n</div>\n<span>{actors}</span>\n</a>\n</div>\n</div>",
+        "placeholder": "{actors}"
+      },
+      "title": {
+        "snippet": "<h3>{title}</h3>",
+        "placeholder": "{title}"
+      }
+    },
+    "wait_strategy": "networkidle"
+  },
+  "bookmark_states": {
+    "e674fe576622": {
+      "last_folder": "\\\\roy-qh918-h\\others\\Other\\个人专属\\x篠田ゆう(筱田优)",
+      "tree_state": {
+        "expanded_paths": [
+          "\\\\roy-qh918-h\\others\\Other",
+          "\\\\roy-qh918-h\\others\\Other\\个人专属"
+        ],
+        "selected_path": "\\\\roy-qh918-h\\others\\Other\\个人专属\\x篠田ゆう(筱田优)",
+        "scroll_position": 0.7333333333333333,
+        "root": "\\\\roy-qh918-h\\others\\Other"
+      },
+      "gallery_scroll_y": 0.3260416666666667,
+      "timestamp": 1785343368.3189535
+    },
+    "c279fe45a6cc": {
+      "last_folder": "\\\\roy-qh918-h\\迅雷\\下载",
+      "tree_state": {},
+      "gallery_scroll_y": 0,
+      "timestamp": 1784976918.5049086
+    }
+  },
+  "ui_cache": {
+    "bookmarks": [
+      {
+        "path": "\\\\roy-qh918-h\\others\\Other",
+        "display_name": "群晖918 Other",
+        "id": "e674fe576622"
+      },
+      {
+        "path": "\\\\roy-qh918-h\\迅雷\\下载",
+        "display_name": "迅雷下载",
+        "id": "c279fe45a6cc"
+      },
+      {
+        "path": "F:\\other",
+        "display_name": "本机F盘 Other",
+        "id": "5c25204db1ec"
+      }
+    ],
+    "last_folder": "\\\\roy-qh918-h\\others\\Other\\个人专属\\x篠田ゆう(筱田优)",
+    "last_root": "\\\\roy-qh918-h\\others\\Other",
+    "last_scroll_y": 0.3260416666666667,
+    "timestamp": 1785343368.3443496
+  }
+}
