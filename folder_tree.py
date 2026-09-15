@@ -23,6 +23,7 @@ async_scanner 仅按其设计文档冻结签名使用：
 - ``folder_index`` 属性（FolderIndex，提供 ``get_folder(path)``）
 """
 import os
+import re
 import tkinter as tk
 from tkinter import ttk
 from typing import List, Optional
@@ -290,12 +291,22 @@ class FolderTree:
             return names
         return []
 
+    @staticmethod
+    def _is_abs_entry(entry: str) -> bool:
+        """判断扫描结果中的子文件夹项是否为绝对路径。"""
+        raw = str(entry).replace("/", "\\")
+        return raw.startswith("\\\\") or bool(re.match(r"^[A-Za-z]:", raw))
+
     def _add_child_nodes(self, parent_path: str, subfolders: list) -> None:
         """为每个子文件夹建节点并放一个占位子节点实现懒加载。
 
+        兼容扫描器返回两种形态：
+        - 子文件夹名称（相对父目录）：拼接父路径得到子路径；
+        - 子文件夹绝对路径（async_scanner 实际形态）：直接规范化。
+
         参数:
             parent_path: 父文件夹规范化路径
-            subfolders: 子文件夹名称列表
+            subfolders: 子文件夹名称或绝对路径列表
         """
         parent_norm = self._normalize(parent_path)
         parent_iid = self._node_map.get(parent_norm)
@@ -307,11 +318,18 @@ class FolderTree:
             if child.startswith("ph:"):
                 self.tree_widget.delete(child)
 
-        for name in subfolders or []:
-            if not name:
+        for entry in subfolders or []:
+            if not entry:
                 continue
-            name = str(name)
-            child_norm = parent_norm.rstrip("/") + "/" + name
+            entry = str(entry)
+            if self._is_abs_entry(entry):
+                child_norm = self._normalize(entry)
+                name = os.path.basename(child_norm.rstrip("/")) or child_norm
+            else:
+                name = entry
+                child_norm = parent_norm.rstrip("/") + "/" + name
+            if not child_norm or child_norm == parent_norm:
+                continue
             child_iid = self._make_iid(child_norm)
             if self.tree_widget.exists(child_iid):
                 continue

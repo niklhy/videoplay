@@ -366,7 +366,8 @@ class MediaBrowserApp:
             selected_root_id = roots[0].root_id if roots else ""
 
         if selected_root_id:
-            # 触发 EVENT_ROOT_SELECTED（同步）-> 文件夹树构建
+            # 选中根目录节点；EVENT_ROOT_SELECTED 由 <<TreeviewSelect>>
+            # 在事件循环中异步派发，因此阶段3恢复需延后到 after(0) 执行
             self.device_tree.select_root(selected_root_id)
 
         # 无根目录配置：状态机推进到 FOLDER_LOADING 后直接进入 READY
@@ -374,21 +375,10 @@ class MediaBrowserApp:
             self.state_machine.transition(
                 STATE_FOLDER_LOADING, root_id=selected_root_id)
 
-        # 阶段3：文件夹树加载（恢复上次展开路径与选中文件夹）
-        if selected_root_id and self.folder_tree.current_root_path:
-            if last_state.selected_folder:
-                self.folder_tree.expand_path(last_state.selected_folder)
-                abs_path = self.config_manager.resolve_absolute_path(
-                    last_state.selected_folder, selected_root_id)
-                if abs_path and os.path.isdir(abs_path):
-                    # 触发 EVENT_FOLDER_SELECTED（同步）-> 图库加载
-                    self.folder_tree.select_node(abs_path)
-                else:
-                    self.folder_tree.select_node(
-                        self.folder_tree.current_root_path)
-            else:
-                self.folder_tree.select_node(
-                    self.folder_tree.current_root_path)
+        # 阶段3：文件夹树加载（恢复上次展开路径与选中文件夹）。
+        # 依赖阶段2的 EVENT_ROOT_SELECTED 先完成文件夹树构建，
+        # 而该事件由事件循环异步派发，故注册 after(0) 推迟执行。
+        self.root.after(0, self._restore_folder_state, selected_root_id)
 
         # 阶段4：图库加载由 EVENT_FOLDER_SELECTED 订阅异步触发
         self.state_machine.transition(STATE_READY)
@@ -397,6 +387,29 @@ class MediaBrowserApp:
         self._poll_events()
 
         self.log_manager.info("main", "启动恢复完成")
+
+    def _restore_folder_state(self, selected_root_id: str) -> None:
+        """阶段3：恢复上次展开的文件夹与选中状态（在事件循环中执行）。
+
+        参数:
+            selected_root_id: 本次启动选中的根目录 ID
+        """
+        if self._closing:
+            return
+        if not (selected_root_id and self.folder_tree.current_root_path):
+            return
+        last_state = self.config_manager.get_last_state(self.device_id)
+        selected = False
+        if last_state.selected_folder:
+            self.folder_tree.expand_path(last_state.selected_folder)
+            abs_path = self.config_manager.resolve_absolute_path(
+                last_state.selected_folder, selected_root_id)
+            if abs_path and os.path.isdir(abs_path):
+                # 触发 EVENT_FOLDER_SELECTED（同步）-> 图库加载
+                selected = self.folder_tree.select_node(abs_path)
+        if not selected:
+            # 恢复目标无效时回退选中根目录，保证图库有内容
+            self.folder_tree.select_node(self.folder_tree.current_root_path)
 
     def _poll_events(self) -> None:
         """经 root.after 周期轮询事件队列（UI 线程消费后台事件）。"""
@@ -437,6 +450,10 @@ class MediaBrowserApp:
         # 重建文件夹树（EVENT_FOLDER_SELECTED 由树自身在选中时发布）
         self.folder_tree.set_root(root_id, root_path)
         self.folder_tree.build_from_root()
+
+        # 阶段3完成（与启动流程一致，首层扫描异步进行不阻塞状态推进）
+        if self.state_machine.get_state() == STATE_FOLDER_LOADING:
+            self.state_machine.transition(STATE_READY)
 
         self._update_status(root_id=root_id)
         self.log_manager.info(
